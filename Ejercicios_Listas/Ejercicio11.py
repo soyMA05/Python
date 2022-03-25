@@ -13,35 +13,24 @@ Created on Thu Mar 24 14:00:02 2022
 #variables
 lista = []
 creciente = False
-decreciente = False
-n = 0
 
 #entrada
-while n == 0: 
+while creciente == False: 
     for i in range(5):
-        lista.append(int(input(f"{i+1}. Ingrese un numero: ")))   
+        lista.append(int(input(f"{i+1}. Ingrese un numero: ")))  
     
+    creciente = True
     for i in range(4):
         if lista[i] < lista[i+1]:
             creciente = True
-        elif lista[i] > lista[i+1]:
-            decreciente = True
-        elif creciente == True and decreciente == True:
+        if lista[i] > lista[i+1]:
+            creciente = False
             break
     
-    if creciente == True and decreciente == False:
-        n = 1
-        #print("Ordenado de forma creciente")
-    elif creciente == False and decreciente == True:
-        print("Elementos no ordenados de forma creciente")
-    elif creciente == True and decreciente == True:
-        print("Elementos no ordenados de forma creciente")
-    else:
-        n = 1
-        #print("Iguales")
-    creciente = False
-    decreciente = False
-    
+    if creciente == False:
+        print("Lista no Ordenada de forma creciente")
+        lista.clear()
+        
 # completar lista de tamaño 10
 for i in range(5):
     lista.append(0)
@@ -50,10 +39,15 @@ for i in range(5):
 numero_usuario = int(input("Ingrese un nuevo número: "))
 j = 0
 contador_posicion = 0
-
 while lista[j] < numero_usuario and j < len(lista) - 5:  
     contador_posicion += 1
     j += 1
+    
+#desplazar posiciones
+j = 4
+while j >= contador_posicion:
+    lista[j+1] = lista[j]
+    j -= 1
 
 #agregar nuevo numero 
 lista[contador_posicion] = numero_usuario
