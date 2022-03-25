@@ -17,7 +17,7 @@ for i in range(10):
     lista.append(int(input(f"{i+1}. Ingrese un número: ")))
 
 posicion = int(input("Ingrese una posición entre 0 - 9 para eliminar un elemento: "))
-while posicion < 0 or posicion > 10:
+while posicion < 0 or posicion > 9:
     posicion = int(input("Ingrese una posición entre 0 - 9 para eliminar un elemento: "))
 
 lista.pop(posicion)#al eliminar un elemento se reduce la longitud de la lista
