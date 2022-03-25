@@ -72,7 +72,7 @@ print(colores.count("rojo"))  #metodo
 #colores.pop(1)
 #print(colores)
 
-#colores.remove('amarillo')#elimino un valor
+#colores.remove('amarillo')#elimino un elemento por nombre o valor
 #print(colores)
 
 #VACIAR TODA LA LISTA
