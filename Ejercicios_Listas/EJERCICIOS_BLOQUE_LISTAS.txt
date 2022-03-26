@@ -1,0 +1,26 @@
+##########################EJERCICIOS: BLOQUE LISTAS o (ARREGLOS en Java)#######################
+1.	Ingresar e imprimir (no se lo guardo por su facilidad).
+2.	Ingresar e imprimir al revés (no se lo guardo por su facilidad).
+3.	Ingresar e imprimir cada valor (no se lo guardo por su facilidad). 
+4.	Leer 10 números enteros, guardarlos en un arreglo. Debemos mostrarlos en el siguiente orden: el primero, el último, el segundo, el penúltimo, el tercero. Completado
+5.	Leer por teclado dos tablas de 10 números enteros y mezclarlas en una tercera de la forma:  el 1° de A, el 1° de B, el 2° de A, el 2° de B. Completado
+6.	Leer los datos correspondientes a dos tablas de 12 elementos numéricos, y mezclarlos en una tercera de la forma: 3 de la tabla A, 3 de la B, otros 3 de A, otros 3 de la B, etc. Completado
+7.	Leer por teclado una serie de 10 números enteros. La aplicación debe indicarnos si los números están ordenados de forma creciente, decreciente, o si están desordenados.  Completado
+8.	Diseñar una aplicación que declare una tabla de 10 elementos enteros. Leer mediante el teclado 8 números. Después pedir un número y una posición, insertarlo en la posición indicada, desplazando los que estén detrás. Completado
+9.	Crear un programa que lea por teclado una tabla de 10 números enteros y la desplace una posición hacia abajo: el primero pasa a ser el segundo, el segunda pasa a ser el tercero y así sucesivamente. El último pasa a ser el primero. Completado
+
+10.	Crear un programa que lea por teclado una tabla de 10 números enteros y desplace N posiciones en el arreglo (N es digitado por el usuario). Completado
+
+11.	Leer 5 elementos numéricos que se introducirán ordenados de forma creciente. Estos los guardaremos en una tabla de tamaño 10. Leer un número N, e insertarlo en el lugar adecuado para que la tabla continué ordenado.  Completado
+
+12.	Leer por teclado una tabla de 10 elementos numéricos enteros y una posición (entre 0 y 9). Eliminar el elemento situado en la posición dada sin dejar huecos. Completado
+
+Nota: Se usa Arrays.toString(arreglo) +" \n"
+
+13.	Leer 10 enteros en una tabla. Guardar en otra tabla los elementos pares de la primera, y a continuación los elementos impares. Completado 
+
+14.	Leer dos series de 10 números enteros, que estarán ordenados crecientemente. Copiar (fusionar) las dos tablas en una tercera, de forma que sigan ordenados. IMPORTANTE: Se uso el metodo sort() para ordenar automaticamente sin hacer bloques de codigo.
+
+15.	Leer 10 enteros ordenados crecientemente. Leer N y buscarlo en la tabla. Se debe mostrar la posición en que se encuentra. Si no está, indicarlo con un mensaje. Completado diferente al del video https://www.youtube.com/watch?v=9hXIwa8dJFo 
+
+16.	Queremos desarrollar una aplicación que nos ayude a gestionar las notas de un centro educativo. Cada grupo (o clase) está compuesto por 5 alumnos. Se pide leer las notas del primer, segundo y tercer trimestre de un grupo. Debemos mostrar al final: la nota media del grupo en cada trimestre, y la media del alumno que se encuentra en la posición N (N se lee por teclado). 
