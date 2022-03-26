@@ -22,7 +22,7 @@ r2=list(range(4)) #lista de 4 elementos del 0 al 3
 #print(r2)
 
 
-#numero de elementos en lista 
+#numero de elementos en lista o longitud de lista
 #print(len(colores)) #propiedad
 
 #BUSCAR
@@ -84,11 +84,11 @@ print(colores.count("rojo"))  #metodo
 
 #ORDENAR LISTAS
 
-#sort para ordenar de A-Z
+#sort para ordenar de A-Z o de forma creciente en numeros para no estar usando bloques de codigo con while o for para ordenar de forma manual
 #colores.sort()
 #print(colores)
 
-#ordena de manera Z-A
+#ordena de manera Z-A o de forma decreciente en numeros
 colores.sort(reverse=True)
 #print(colores)
 
