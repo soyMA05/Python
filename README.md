@@ -8,6 +8,8 @@
 5. [**Funciones**](#funciones)
     
     5.1. [**Funciones Lambda**](#funciones_lambda)
+    
+    5.2. [**Funciones Recursivas**](#funciones_recursivas)
 6. [**Módulos**](#modulos)
 
 # <a id="tipos_datos_resumen"></a> 
@@ -220,6 +222,26 @@ print(suma(5, 18))
 ```
 
 **Nota:** Este mismo ejemplo se encuentra en el archivo "Python\funciones_lambda.py"
+
+# <a id="funciones_recursivas"> </a>
+## 5.2 Funciones recursivas
+La recursion es definir algo en términos de sí mismo. Es decir, una función recursiva es aquella que se llama así misma.
+
+Elementos de las funciones recursivas
+* **Caso base**: permite que el proceso se detenga, el proceso de que la función se llame así una y otra vez. En sí no debe automallarse.
+* **Caso recursivo**: permite descomponer el problema en una versión más pequeña de ese mismo problema, hasta llegar al caso base que detiene ese proceso.
+
+```python
+def fibonacci(n):
+    #caso base
+    if n== 0 or n ==1:
+        return n
+    #caso recursivo
+    if n !=0 and n !=1:
+        return fibonacci(n-1) + fibonacci(n-2)     
+print(fibonacci(3))
+```
+**Nota:**  Otro ejemplo de recursividad aplicado a factorial se encuentra en el archivo "Python\recursividad.py".
 
 # <a id="modulos"> </a>     
 # 6. Módulos
