@@ -1,0 +1,4 @@
+Aprendiendo Python 
+Manejo de archivos 
+Uso de la sentencia with para abri archivos y cerrarlos automaticamente 
+La sentencia with contiene dos parametros, el tipo y nombre de archivo y el modo de acceso  
