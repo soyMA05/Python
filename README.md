@@ -275,6 +275,22 @@ Para instalar módulos de tercero se usa el comando pip. A veces la consola de W
 ## 6.3 Modulos propio
 Se escribe codigo en un archivo.py y para usarlo, debemos importarlo desde otro archivo.
 
+# 7. Archivos
+Unicamente se tratan archivos de texto(txt). Para trabajar con archivos en python es recomendable usar la setencia **with**.
+* **Sentencia "with"**: permite abrir un archivo y luego lo cierra automaticamente.
+* Modos de apertura:
+    * "r" LECTURA
+    * "w" ESCRITURA y reemplaza todo el contenido del archivo.
+    * "a" AGREGAR contenido archivo.
+    * Agregar un + incluye leer. Por ejemplo r+ o w+.
+
+```python
+with open("nombreArchivo.txt"," r,w,a") as nombreVariable:
+    for linea in nombreVariable
+    print(linea)
+```
+
+**Nota:**  Revisar el archivo "Python\archivos.py" donde se encuentran los ejemplos de los tres modos para leer, escribir, agregar y se usa r+ para eliminar con el metodo truncate.
 
 # Referencias
 https://www.youtube.com/watch?v=chPhlsHoEPo
