@@ -11,6 +11,9 @@
     
     5.2. [**Funciones Recursivas**](#funciones_recursivas)
 6. [**Módulos**](#modulos)
+7. [**Archivos**](#archivos)
+8. [**Errores: manejo de excepciones**](#errores_excepciones)
+9. [**Programacion Orientada a Objetos - POO**](#poo)
 
 # <a id="tipos_datos_resumen"></a> 
 # 1. Tipos de datos en Python (Resumen)
@@ -275,6 +278,7 @@ Para instalar módulos de tercero se usa el comando pip. A veces la consola de W
 ## 6.3 Modulos propio
 Se escribe codigo en un archivo.py y para usarlo, debemos importarlo desde otro archivo.
 
+# <a id="archivos"> </a>
 # 7. Archivos
 Unicamente se tratan archivos de texto(txt). Para trabajar con archivos en python es recomendable usar la setencia **with**.
 * **Sentencia "with"**: permite abrir un archivo y luego lo cierra automaticamente.
@@ -292,6 +296,7 @@ with open("nombreArchivo.txt"," r,w,a") as nombreVariable:
 
 **Nota:**  Revisar el archivo "Python\archivos.py" donde se encuentran los ejemplos de los tres modos para leer, escribir, agregar y se usa r+ para eliminar con el metodo truncate.
 
+# <a id="errores_excepciones"> </a>
 # 8. Errores: manejo de excepciones
 
 Manual de manejo de principales tipos de excepciones:
@@ -332,6 +337,50 @@ Apuntes Python: https://docs.hektorprofe.net/python/errores-y-excepciones/excepc
     print("Rpta",rspt)
 ```
 **Nota:**  Revisar el archivo "Python\errores.py" donde se encuentran las 6 formas de usar las excepciones. El ejercicio se encuentra en "Python\errores_ejercicios.py"
+
+# <a id="poo"> </a>
+# 9. Programacion Orientada a Objetos - POO
+Para crear un objeto especifico, se debe crear un plano. Desde un plano se pueden varios objetos del mismo tipo, porque tienen el mismo plano. Un plano de casa, puede crear varias casas.
+* **self**: esta relacionado con el concepto de instancia. En el ejemplo que se ve, self está relacionado con cada una de las cuentas bancarias.
+
+```python
+#SINTAXIS
+class NombreClase:
+    def __init__(self, parametros_ValorAtributo):
+        self.nombre_atributo = parametros_ValorAtributo
+    
+    def metodo_valorObjeto(self):
+        print (self.nombre_atributo)#para mostrar los valores actuales del objeto
+    
+    def metodo_operacion(self, parametros_ValorAtributo):
+        if self.nombre_atributo >= 0: #para operar con  valores en los metodos 
+            
+
+#EJEMPLO
+class CuentaBancaria:
+    #Atributos/Caracteristicas
+    def __init__(self, num_cuenta, nombre_titular, balance):
+        self.num_cuenta = num_cuenta
+        self.nombre_titular = nombre_titular
+        self.balance = balance
+
+    #Método/Propiedad o estado del objeto
+    def generar_balance(self): # viene a ser como Get 
+        print(self.balance)
+    
+    #metodo/que realiza una tarea
+    def depositar(self, monto):
+        if monto > 0:
+            self.balance += monto
+    
+mi_cuenta = CuentaBancaria("2207812558", "Miguel Castillo", 50)
+print("Saldo:", mi_cuenta.balance)
+#mi_cuenta.generar_balance()
+
+mi_cuenta.depositar(int(input("Ingrese un monto a depositar: ")))
+print("Saldo Actualizado:", mi_cuenta.balance)
+
+```
 
 # Referencias
 https://www.youtube.com/watch?v=chPhlsHoEPo
