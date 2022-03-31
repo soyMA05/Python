@@ -292,5 +292,46 @@ with open("nombreArchivo.txt"," r,w,a") as nombreVariable:
 
 **Nota:**  Revisar el archivo "Python\archivos.py" donde se encuentran los ejemplos de los tres modos para leer, escribir, agregar y se usa r+ para eliminar con el metodo truncate.
 
+# 8. Errores: manejo de excepciones
+
+Manual de manejo de principales tipos de excepciones:
+https://aprendeconalf.es/docencia/python/manual/excepciones/
+
+Apuntes Python: https://docs.hektorprofe.net/python/errores-y-excepciones/excepciones-multiples/
+```python
+    n1 = 8
+    n2 = 0
+    try:
+        #Intenta ejecutar este codigo
+    except ZeroDivisionError:
+    else:
+    finally:
+    
+    #Ejercicio
+    
+    #variables
+    resultado = 0
+    #funcion division
+    def division(num1, num2):
+        try:
+            return num1 / num2
+        except ZeroDivisionError as e:
+            print(e, " No se puede dividir entre 0")
+            return 123
+        
+    #entrada
+    n1 = int(input("Digite un numero: "))
+    n2 = int(input("Digite otro numero: "))
+    rspt = division(n1, n2)
+
+    while rspt == 123:
+        n1 = int(input("Digite un numero: "))
+        n2 = int(input("Digite otro numero: "))
+        rspt = division(n1, n2)
+
+    print("Rpta",rspt)
+```
+**Nota:**  Revisar el archivo "Python\errores.py" donde se encuentran las 6 formas de usar las excepciones. El ejercicio se encuentra en "Python\errores_ejercicios.py"
+
 # Referencias
 https://www.youtube.com/watch?v=chPhlsHoEPo
