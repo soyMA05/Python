@@ -346,6 +346,7 @@ Para crear un objeto especifico, se debe crear un plano. Desde un plano se puede
 ```python
 #SINTAXIS
 class NombreClase:
+    #Metodo Constructor para definir Atributos/Caracteristicas 
     def __init__(self, parametros_ValorAtributo):
         self.nombre_atributo = parametros_ValorAtributo
     
@@ -358,7 +359,7 @@ class NombreClase:
 
 #EJEMPLO
 class CuentaBancaria:
-    #Atributos/Caracteristicas
+    #Metodo Constructor para definir Atributos/Caracteristicas
     def __init__(self, num_cuenta, nombre_titular, balance):
         self.num_cuenta = num_cuenta
         self.nombre_titular = nombre_titular
@@ -379,8 +380,114 @@ print("Saldo:", mi_cuenta.balance)
 
 mi_cuenta.depositar(int(input("Ingrese un monto a depositar: ")))
 print("Saldo Actualizado:", mi_cuenta.balance)
-
 ```
+## 9.1 POO - conceptos
+* **Objeto** es algo que se quiere representar, es una Entidad. Posee atributos y métodos.
+    * **Atributos** son las características o estados que definen al objeto. Se pueden crear de forma dinámica, es decir, después de su ejecución.
+        1. **Atributo de clase o estático**: para todos las instancias de esa clase van a tener el mismo valor, es atributo estatico.
+        2. **Atributo instancia**: para cada uno de los objetos van a tener sus propios atributos.
+    * **Métodos** son las acciones que puede realizar el objeto.
+        1. **Metodo constructor** que inicializa los valores de los atributos de instancia.
+        2. **
+* **Clase** es el plano o molde para definir la estructura y poder crear objetos.
+* **Instancia** es obtener un objeto (crear objeto) a partir de una clase.
+* **Metodo constructor** sirve para inicializar los atributos de un objeto.
+    * **self** hace referencia al objeto que se está creando (dentro de la clase) y no se debe tomar en cuenta cuando se quiere instanciar un objeto (solo los parametros que son).
+    ```python
+    class Clase:
+        #Atributo de clase
+        atributo_estatico = "valor"
+
+        #metodo constructor / Atributo de instancia
+        def __init__(self, parametro)
+            self.atributo = parametro
+    ```
+
+ME QUEDE EN MINUTO 30:30 https://www.youtube.com/watch?v=iliKayKaGtc
+
 
 # Referencias
-https://www.youtube.com/watch?v=chPhlsHoEPo
+FatzCode(2019) "Python para principiantes" https://www.youtube.com/watch?v=chPhlsHoEPo
+
+freeCodeCamp Español (2021) "Introducción a Programación en Python" https://www.youtube.com/watch?v=DLikpfc64cA&t=13924s
+
+
+
+**Lectura**
+
+Hector Docs(2018) "Apuntes de Python" https://docs.hektorprofe.net/python/errores-y-excepciones/excepciones-multiples/
+
+# Crear un Portafolio Exitoso
+1. Comprar un dominio. 
+    * Esto tiene un valor de 10 a 20 $.
+    * Utiliza el dominio nombreapellido.com
+2. Idioma.
+    * Dependiendo del pais en donde quiero conseguir el trabajo debo poner la página en esos idiomas (minimo 2, español-ingles, español-frances, etc).
+3. Servicios que ofreces.
+    * Lo que quiero vender debe estar claro en mi página.
+4. Area de proyectos.
+    * Parte vital porque demuestro mi experiencia.
+    * Demuestro en qué proyectos he trabajado, pueden ser los más destacados o todos, pero...
+    * Debo asegurar una buena experiencia de usuario.
+    * Por cada proyecto que coloque debo hacer:
+        - Colocar una imagen, debajo el nombre del proyecto, luego debajo colocar un resumen de 2 a 3 líneas sobre lo que trata el proyecto.
+        - Debajo del resumen, usar iconos para poner el link del proyecto. Otro ícono para poner la URL del código del proyecto.
+5. Experiencia laboral
+    * Poner en qué empresas he trabajado o realizado pasantías.
+    * Poner fecha, titulo de ocupacion.
+    * Breve descripción si es posible.
+6. Educacion.
+    * Si hice cursos o certificaciones.
+    * Resaltar qué tecnologías uno sabe, por ejemplo:.
+        * Seccion de Frontend Development.
+            - Lenguajes:
+                * HTML5
+                * CSS
+                * JavaSript
+            - Frameworks and Librerías
+                * Bootstrap
+                * Angular
+                * React
+                * Vue.js
+                * Materialize Css
+                * Webpack
+                * Flexbox
+                * Pug
+                * EJS
+        * Seccion de Backend Development.
+            - Lenguajes y Frameworks
+                * Python
+                * JavaScript
+                * Java
+                * Django
+                * Node.js
+                * Express.js
+            - Databases
+                * MySQL
+                * HeidiSQL
+                * MongoDB
+            - Others
+                * Postman
+                * Heroku
+                * Firebase
+                * Docker
+                * Salesforce
+                * Grafana
+        * Sección Machine Learning y otras cosas
+            - ML Libraries
+                * Tensorflow
+                * Pytorch
+            - Others
+                * Git
+                * Github
+                * Photoshop
+                * EcmaScript
+                * TypeScript
+                * NPM
+                * Scrum
+                * Jira
+            - Sistemas Operativos
+                * Windows
+                * Linux
+7. Informacion de contacto
+    * Redes sociales
