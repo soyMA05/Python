@@ -17,7 +17,10 @@ print("La nueva pelicula es : {0}".format(myStr))
 
 #transformar texto a mayusculas, tipo oracion y otro metodos se pueden visualizar en el anterior
 print(myStr.upper())
+#transformar texto a tipo oracion
 print(myStr.capitalize())
+#transformar texto a minuscula
+print(myStr.lower())
 
 #reemplazar texto
 print(myStr.replace("Hola", "Bienvenido"))
