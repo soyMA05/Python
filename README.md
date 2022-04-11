@@ -340,7 +340,7 @@ Apuntes Python: https://docs.hektorprofe.net/python/errores-y-excepciones/excepc
 
 # <a id="poo"> </a>
 # 9. Programacion Orientada a Objetos - POO
-Para crear un objeto especifico, se debe crear un plano. Desde un plano se pueden varios objetos del mismo tipo, porque tienen el mismo plano. Un plano de casa, puede crear varias casas.
+Para crear un objeto especifico, se debe crear un plano. Desde un plano se pueden crear varios objetos del mismo tipo, porque tienen el mismo plano. Un plano de casa, puede crear varias casas.
 * **self**: esta relacionado con el concepto de instancia. En el ejemplo que se ve, self está relacionado con cada una de las cuentas bancarias.
 
 ```python
@@ -388,7 +388,7 @@ print("Saldo Actualizado:", mi_cuenta.balance)
         2. **Atributo instancia**: para cada uno de los objetos van a tener sus propios atributos.
     * **Métodos** son las acciones que puede realizar el objeto.
         1. **Metodo constructor** que inicializa los valores de los atributos de instancia.
-        2. **
+        2. **Metodo de accion** son las operaciones para obtener el estado del objeto o manejar determinados datos de ese objeto para realizar cambios y mostrarlos.
 * **Clase** es el plano o molde para definir la estructura y poder crear objetos.
 * **Instancia** es obtener un objeto (crear objeto) a partir de una clase.
 * **Metodo constructor** sirve para inicializar los atributos de un objeto.
