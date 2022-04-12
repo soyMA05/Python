@@ -387,8 +387,9 @@ print("Saldo Actualizado:", mi_cuenta.balance)
         1. **Atributo de clase o estático**: para todos las instancias de esa clase van a tener el mismo valor, es atributo estatico.
         2. **Atributo instancia**: para cada uno de los objetos van a tener sus propios atributos.
     * **Métodos** son las acciones que puede realizar el objeto.
-        1. **Metodo constructor** que inicializa los valores de los atributos de instancia.
+        1. **Metodo constructor (privado)** que inicializa los valores de los atributos de instancia.
         2. **Metodo de accion** son las operaciones para obtener el estado del objeto o manejar determinados datos de ese objeto para realizar cambios y mostrarlos.
+        3. **Metodo estático o de clase** son aquellos que se pueden utilizar sin la necesidad de una instancia.
 * **Clase** es el plano o molde para definir la estructura y poder crear objetos.
 * **Instancia** es obtener un objeto (crear objeto) a partir de una clase.
 * **Metodo constructor** sirve para inicializar los atributos de un objeto.
@@ -403,8 +404,18 @@ print("Saldo Actualizado:", mi_cuenta.balance)
             self.atributo = parametro
     ```
 
-ME QUEDE EN MINUTO 30:30 https://www.youtube.com/watch?v=iliKayKaGtc
+* **UML (Language Unified Modeling - Lenguaje Unificado de Modelado)**
+En la POO se utiliza el *diagrama de clases* para visualizar rápidamente un sistema que ha utilizado POO. Ver explicacion: https://www.youtube.com/watch?v=iliKayKaGtc
+* **Patrones de Diseño**: son reglas o formas que nos permiten diseñar un modelo de forma correcta y que nos ayudan a que nuestro modelo funciona de la manera que se espera.
+## 9.2 Fundamentos de POO
+* **HERENCIA** [**aqui**](https://www.youtube.com/watch?v=iliKayKaGtc)
+    * Relación de generalización (clase hija (subclase) hereda de la clase padre (súperclase))
+    * La subclase hereda los métodos de la superclase, a menos que la subclase los reimplemente o sea los puede reescribir y se utiliza el método de la clase hija y ya no de la clase padre.
+    * Se pueden usar clases abstractas pero estas no se pueden instanciar, si no que se instancian a partir de las clases hijas.
 
+
+
+**NOTA** aqui me quedo https://www.youtube.com/watch?v=iliKayKaGtc
 
 # Referencias
 FatzCode(2019) "Python para principiantes" https://www.youtube.com/watch?v=chPhlsHoEPo
