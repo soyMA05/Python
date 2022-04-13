@@ -381,6 +381,8 @@ print("Saldo:", mi_cuenta.balance)
 mi_cuenta.depositar(int(input("Ingrese un monto a depositar: ")))
 print("Saldo Actualizado:", mi_cuenta.balance)
 ```
+**Nota:**  Revisar el archivo "Python\POO\claseGato.py, claseGato_Instancias.py y claseGato_repaso.py" donde se crean ejemplos de clases.
+
 ## 9.1 POO - conceptos
 * **Objeto** es algo que se quiere representar, es una Entidad. Posee atributos y métodos.
     * **Atributos** son las características o estados que definen al objeto. Se pueden crear de forma dinámica, es decir, después de su ejecución.
@@ -408,10 +410,21 @@ print("Saldo Actualizado:", mi_cuenta.balance)
 En la POO se utiliza el *diagrama de clases* para visualizar rápidamente un sistema que ha utilizado POO. Ver explicacion: https://www.youtube.com/watch?v=iliKayKaGtc
 * **Patrones de Diseño**: son reglas o formas que nos permiten diseñar un modelo de forma correcta y que nos ayudan a que nuestro modelo funciona de la manera que se espera.
 ## 9.2 Fundamentos de POO
-* **HERENCIA** [**aqui**](https://www.youtube.com/watch?v=iliKayKaGtc)
+* **HERENCIA** [**aqui min 44:24**](https://www.youtube.com/watch?v=iliKayKaGtc)
     * Relación de generalización (clase hija (subclase) hereda de la clase padre (súperclase))
     * La subclase hereda los métodos de la superclase, a menos que la subclase los reimplemente o sea los puede reescribir y se utiliza el método de la clase hija y ya no de la clase padre.
-    * Se pueden usar clases abstractas pero estas no se pueden instanciar, si no que se instancian a partir de las clases hijas.
+    * Se pueden usar clases abstractas pero estas no se pueden instanciar, si no que se instancian a partir de las clases hijas (para usar clases abstractas se usa un modulo).
+
+    **Nota:**  Revisar el archivo "Python\POO\herencia.py" donde se realiza un ejemplo del video. El ejercicio se encuentra en "Python\POO\herencia_repaso.py"
+
+* **ENCAPSULAMIENTO** 
+    * Un objeto debe incluir todos los atributos y métodos necesarios.
+    * No incluir métodos que sean responsabilidad de otras clases (Permite lograr un bajo acoplamiento. El acoplamiento es la medida en que un objeto depende de otro, es la medida en que los objetos modifican el estado de otros objetos). 
+
+* **OCULTAMIENTO**
+    * Oculta atributos y métodos que solo se van a usar dentro de una determinada clase y no son accesibles por otros objetos.
+    * Evita el acceso a los datos de forma accidental o indebida.
+    * Permite esconder detalles de la implementación.
 
 
 
