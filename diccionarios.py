@@ -39,7 +39,12 @@ productos=[{"name":"book", "price":3.99, "stock":30, "author":"Miguel A."},
 print(productos)
 
 
-
+# DICCIONARIO DINAMICO
+#declaro diccionario vacio
+computadoras = {}
+#nombreDiccionario[clave] = valor
+computadoras[123]="DELL"
+print(computadoras)
 
 
 
