@@ -406,7 +406,7 @@ print("Saldo Actualizado:", mi_cuenta.balance)
     ```python
     class Clase:
         #Atributo de clase
-        atributo_estatico = "valor"
+        ATRIBUTO_ESTATICO = "valor"
 
         #metodo constructor / Atributo de instancia
         def __init__(self, parametro)
@@ -432,7 +432,31 @@ En la POO se utiliza el *diagrama de clases* para visualizar rápidamente un sis
     * Oculta atributos y métodos que solo se van a usar dentro de una determinada clase y no son accesibles por otros objetos.
     * Evita el acceso a los datos de forma accidental o indebida.
     * Permite esconder detalles de la implementación.
-    * No se usa Getters y Setters si no se usa "Properties" para enmacasrar propiedades. Por lo tanto se usa el decorador @property y el atributo privado se usa en una funcion con el mismo nombre del atributo y dentro de la funcion se usa return self._nombreAtributo 
+    * No se usa Getters y Setters si no se usa "Properties" para enmacasrar propiedades. Por lo tanto se usa el decorador @property y el atributo privado se usa en una funcion con el mismo nombre del atributo y dentro de la funcion se usa return self._nombreAtributo. A continuación se ve la primera forma de ocultamiento. 
+     ```python
+        #PRIMERA FORMA DE OCULTAMIENTO DE DATOS
+        def __init__(self, nombre, profesor, fecha):
+        self.nombreMateria = nombre
+        self.nombreProfesor = profesor
+        #OCULTAMIENTO de aqui para abajo
+        #nuevo atributo que no puede ser anterior a 2006
+        self.fechaInicioDictadoMateria = fecha # primero pasa por una validacion (los metodos de abajo) y luego se asigna
+        
+        @property # PROPERTY enmascara o envuelve un atributo dentro de una propiedad
+        def fechaInicioDictadoMateria(self):
+            #print("prueba que primero pasa por aqui para luego asignar")
+            return self._fechaInicioDictadoMateria #atributo privado, es decir que esta protegido o que esta oculto
+        
+        #SETTER permite modificar o hacer la validación para luego confirmar la asignacion
+        @fechaInicioDictadoMateria.setter
+        def fechaInicioDictadoMateria(self, fecha):
+            if fecha < 2006:
+                self._fechaInicioDictadoMateria = 2006
+            else:
+                self._fechaInicioDictadoMateria = fecha
+        
+        #Para ver la segunda forma ver el video min 1:17:32
+     ```
     
     #FALTA REVISAR
 
