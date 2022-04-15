@@ -428,6 +428,8 @@ En la POO se utiliza el *diagrama de clases* para visualizar rápidamente un sis
     * Un objeto debe incluir todos los atributos y métodos necesarios.
     * No incluir métodos que sean responsabilidad de otras clases (Permite lograr un bajo acoplamiento. El acoplamiento es la medida en que un objeto depende de otro, es la medida en que los objetos modifican el estado de otros objetos). 
 
+    **Nota:**  Revisar el archivo "Python\POO\encapsulamiento_y_ocultamiento.py" donde se realiza el ejemplo del video.
+
 * **OCULTAMIENTO[**min 1:07:10**](https://www.youtube.com/watch?v=iliKayKaGtc)** 
     * Oculta atributos y métodos que solo se van a usar dentro de una determinada clase y no son accesibles por otros objetos.
     * Evita el acceso a los datos de forma accidental o indebida.
@@ -458,7 +460,17 @@ En la POO se utiliza el *diagrama de clases* para visualizar rápidamente un sis
         #Para ver la segunda forma ver el video min 1:17:32
      ```
     
-    #FALTA REVISAR
+    **Nota:**  Revisar el archivo "Python\POO\encapsulamiento_y_ocultamiento.py" donde se realiza el ejemplo del video.
+
+* **ABSTRACCIÓN[**min 1:19:10**](https://youtu.be/iliKayKaGtc)** 
+    * La abstracción no es original de la POO porque lo que hace es ocultar cierta complejidad y proveer de una interfaz más simple para acceder a determinadas funciones. 
+    * Un claro ejemplo es la interacción con la base de datos. Porque hay una interfaz de conexión especial entre aplicación y BDD que brinda métodos simplificados para conectarse.
+
+* **POLIMORFISMO[**min 1:21:46**](https://youtu.be/iliKayKaGtc)**
+    * Se encuentra relacionador con la herencia, porque un mismo objeto puede tomar varias formas cambiando métodos.
+    * Un mismo método puede tomar "varias formas". Es decir, puede reimplementarse en una subclase, o puede reescribirse con distintos parámetros y valor de retorno.
+    * Sobreescritura y sobrecarga de métodos y operadores. 
+    * Un claro ejemplo es cuando la superclase tiene declarado cualquier método y la subclase puede usar el mismo nombre del método de la superclase pero le puede modificar los parametros o estructura interna del método
 
 
 **NOTA** aqui me quedo https://www.youtube.com/watch?v=iliKayKaGtc
