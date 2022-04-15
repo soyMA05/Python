@@ -52,7 +52,7 @@ print(algebra.nombreMateria)
 """
 #ENCAPUSALAMIENTO
 ingenieria.agregarMaterias(123, algebra)
-print(ingenieria.materias)
+print(ingenieria.materias[123])
 
 # OCULTAMIENTO
 print(algebra.fechaInicioDictadoMateria)
