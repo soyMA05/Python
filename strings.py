@@ -70,3 +70,17 @@ print(myStr.isnumeric())
 print(myStr.isalpha())
 
 
+
+#SLICING DE CADENAS
+#posiciones      012345
+#posiciones reversa -6-5-4-3-2-1       
+
+#
+cadena_reversa = "leugiM"
+print(cadena_reversa[::-1])
+
+texto='Hola Mundo'
+print(texto[:4])
+
+texto2= 'cadena'
+print(texto2[-6::2])
