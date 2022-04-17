@@ -99,7 +99,9 @@ colores.sort(reverse=True)
 
 
 
-
+#CONCATENACION DE LISTAS
+lista_concatenada = colores + datos
+print(lista_concatenada)
 
 
 
