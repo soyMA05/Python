@@ -103,12 +103,25 @@ colores.sort(reverse=True)
 lista_concatenada = colores + datos
 print(lista_concatenada)
 
+#ACTUALIZACION DE DATOS USANDO SLICING [:]
+lista_concatenada[:2]=['negro','blanco']
+print('Lista actualizada: ',lista_concatenada)
 
+#LISTA DE LISTAS
+fila1=[1,2,3]
+fila2=[4,5,6]
+fila3=[7,8,9]
+matriz=[fila1,fila2,fila3]
+print(matriz[1][1:]) #sin pandas
 
+import pandas as pd
+matriz_pd = pd.DataFrame(matriz,
+                         columns = ["Columna 1","Columna 2","Columna 3"])
+print(matriz_pd)
 
-
-
-
+print(matriz_pd[1:2])
+#seleccionar fila con pandas
+print(matriz_pd.iloc[1][1:])#con pandas
 
 
 
