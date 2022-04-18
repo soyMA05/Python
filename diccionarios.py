@@ -22,32 +22,53 @@ person={
 #print(dir(person))
 
 #OBTENER SOLO CLAVES DE UN DICCIONARIO
-print(person.keys())
+#print(person.keys())
 
 #OBTENER ITEMS (elementos con clave-valor) DE UN DICCIONARIO
-print(person.items())
+#print(person.items())
 
 
 #VACIAR DICCIONARIO
-person.clear()
+#person.clear()
 
 #LISTA CON DICCIONARIOS
 productos=[{"name":"book", "price":3.99, "stock":30, "author":"Miguel A."},
            {"name":"laptop", "price":805.99, "stock":20, "author":"Miguel A."}]
 
 
-print(productos)
+#print(productos)
 
 
-# DICCIONARIO DINAMICO
+# ASIGNO VALOR EN UNA CLAVE O ACTUALIZO VALOR
 #declaro diccionario vacio
 computadoras = {}
 #nombreDiccionario[clave] = valor
-computadoras[123]="DELL"
-print(computadoras)
+#computadoras[123]="DELL"#Esta forma se utiliza para asignar un valor a una clave de diccionario o para actualizar su valor
+#print(computadoras)
 
 
 
+#EJERCICIO: Agregar diccionarios a una Lista
+
+registro_clientes = {}
+lista_clientes = []
+clv_nombre = "Nombre"
+clv_edad = "Edad"
+
+num_clientes = int(input("Ingrese la cantidad de clientes a registrar: "))
+
+for i in range(num_clientes):
+    nombre = input(f'Ingrese el nombre del cliente {i+1}: ')
+    edad = int(input(f'Ingrese la edad del cliente {i+1}: '))
+    registro_clientes={clv_nombre:nombre, clv_edad:edad}
+    #registro_clientes[clv_nombre]= nombre #Al utilizar asi se actualizan los valores (Nota: Revisar encapsulamiento_y_ocultamiento.py)
+    print(registro_clientes.items())#muestra valores por cada diccionario
+    lista_clientes.append(registro_clientes)
+    
+print("Clientes registrados: ")
+for i in lista_clientes:
+    print(i["Nombre"],'-',i['Edad'])
+    
 
 
 
