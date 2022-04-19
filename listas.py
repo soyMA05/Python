@@ -126,9 +126,18 @@ print(matriz_pd.iloc[1][1:])#con pandas
 
 
 
+"""
+#EJERCICIO: Dadas dos listas, se debe generar una tercera lista con todos los elementos que se repiten entre ellas
+pero no se debe repetir ningun elemento en la nueva lista. 
+"""
+lista1 = ['M','i', 'a','m','i','g','o', 'E','l','o','n']
+lista2 = ['T','u', 'a','m','i','g','u','i','t','o']
+lista3 = []
 
-
-
+for letra in lista1:
+    if letra in lista2 and letra not in lista3:
+        lista3.append(letra)
+print(lista3)
 
 
 
