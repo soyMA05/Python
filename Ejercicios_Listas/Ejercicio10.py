@@ -16,10 +16,18 @@ lista_backup = []
 for i in range (10):
     lista.append(int(input(f"{i+1}. Ingrese un numero: ")))
 
+"""
+#Forma 1
 numero_posicion = int(input("Ingrese una posición a desplazar entre 1 - 9: "))
 while numero_posicion < 0 or numero_posicion >9 :
-    numero_posicion = int(input("Ingrese una posición a desplazar entre 1 - 9: "))
+    numero_posicion = int(input("Ingrese una posición a desplazar correcta entre 1 - 9: "))
+"""
 
+#Forma2
+while (True):
+    numero_posicion = int(input("Ingrese una posición a desplazar entre 1 - 9: "))
+    if numero_posicion > 0 and numero_posicion <9:
+        break
 
 # dezplazar n posiciones
 j = 0
