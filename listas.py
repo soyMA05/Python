@@ -11,6 +11,7 @@ colores=["amarillo", "azul", "rojo", "rojo", "caqui"]
 #CONSTRUCTOR O FUNCION PARA CREAR LISTAS list()
 #crear lista con tupla se usa cuando queremos solo tener el mismo tipo de dato
 mylist=list((5,23,8))
+print(sum(list(range(0,101,2))))
 #print(type(mylist))
 print(type("azul" in colores))
 
