@@ -52,3 +52,4 @@ gato1.nombre = "Kiko"
 print("El gato "+ nombre_antiguo + " ahora se llama " + gato1.nombre )
 
 print(dir(gato1))
+"""
