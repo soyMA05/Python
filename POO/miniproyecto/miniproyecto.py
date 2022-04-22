@@ -166,16 +166,14 @@ vaca1.listaFechaPartos.append('20-11-2022')
 print(vaca1.listaFechaPartos)
 vaca1.preñezVaca("DESCONOCIDO".lower(), "20-01-2022")
 print(vaca1.listaPreniez_toros)
-vaca1.agregarTernero("Pepeto", "desconocido")
-vaca1.listarHijosTerneros()
 
 #BDD
 import sqlite3 
 conexion = sqlite3.connect(r"C:\Users\Usuario\OneDrive\Documents\JupyerNotebook\ejemplo.db")
 cursor= conexion.cursor()
 #cursor.execute('CREATE TABLE Vaca (nombreAnimal varchar(30), edadAnimal int, pesoAnimal float, fechaNacimiento date, razaAnimal varchar(30), enfermedad varchar(50), tratamiento varchar(50), estadoProduccion varchar(30), listaCantidad_produccion int, numero_tetas int, listaAlimentos_vaca text, listaFechaPartos text, numero_partos int, listaPreniez_toros text,  listaPreniez_fechas text, listaTerneros text, observacion text)')
-cursor.execute(f'INSERT INTO Vaca VALUES ("Pulga", 2, 850,{vaca1.fechaNacimiento},"Brown Swiss", {vaca1.enfermedad}, {vaca1.tratamiento}  )')
-conexion.commit()
+#cursor.execute(f'INSERT INTO Vaca VALUES ("Pulga", 2, 850,{vaca1.fechaNacimiento},"Brown Swiss", {vaca1.enfermedad}, {vaca1.tratamiento}  )')
+#conexion.commit()
 
 #INSTANCIAS DE CLASE TERNERO
 ternero1 = Ternero("Malo", 1, 250, "Gir", 'desconocido', 'Estrella', 'Chivo adoptado por la Estrella')
@@ -187,6 +185,8 @@ print(ternero1.consultarAlimentos())
 print(ternero1.eliminarAlimento('leche'))
 ternero1.tomarLeche(1)
 
+vaca1.agregarTernero(ternero1, "desconocido")
+vaca1.listarHijosTerneros()
 
 """
 FALTA:
