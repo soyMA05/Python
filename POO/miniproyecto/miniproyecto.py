@@ -4,6 +4,8 @@ Created on Wed Apr 20 14:30:20 2022
 
 @author: MIANCAS
 """
+import numpy as np
+
 #------------------------------------------------------------------------------
 
 class Animal:
@@ -68,6 +70,7 @@ class Vaca(Animal):
     def ordeñar(self, litros):
         self.listaCantidad_produccion.append(litros)
     
+        
     def ordeñarparaTernero(self, motivo):
         if motivo == self.enfermedad:
             print( 'Vaca con "', self.enfermedad, '"leche destinada a terneros')
@@ -75,6 +78,10 @@ class Vaca(Animal):
             print( 'Vaca con "', self.observacion, '"leche destinada a terneros')
         else:
             print( 'Motivo no coincide con enfermedad u observacion')
+    
+    def obtenerProduccion(self):
+        arr_produccion = np.array(self.listaCantidad_produccion)
+        return sum(arr_produccion), arr_produccion.mean()
     
     #cuando la vaca se encuentre en plena produccion
     def preñezVaca(self, toroPajilla, fecha):
@@ -159,7 +166,7 @@ vaca1.agregarAlimento("yerba")
 print(vaca1.consultarAlimentos())
 vaca1.eliminarAlimento("melasa")
 vaca1.ordeñar(15)
-vaca1.ordeñar(16)
+vaca1.ordeñar(13)
 vaca1.ordeñarparaTernero('vacuna contra mastitis')
 print(vaca1.listaCantidad_produccion)
 vaca1.listaFechaPartos.append('20-11-2022')
@@ -187,6 +194,12 @@ ternero1.tomarLeche(1)
 
 vaca1.agregarTernero(ternero1, "desconocido")
 vaca1.listarHijosTerneros()
+
+
+#USO DE NUMPY
+print(vaca1.obtenerProduccion())
+
+
 
 """
 FALTA:
