@@ -5,7 +5,7 @@ Created on Wed Apr 20 14:30:20 2022
 @author: MIANCAS
 """
 import numpy as np
-
+PRECIO_LECHE = 0.43
 #------------------------------------------------------------------------------
 
 class Animal:
@@ -81,7 +81,7 @@ class Vaca(Animal):
     
     def obtenerProduccion(self):
         arr_produccion = np.array(self.listaCantidad_produccion)
-        return sum(arr_produccion), arr_produccion.mean()
+        return sum(arr_produccion), sum(arr_produccion)*PRECIO_LECHE, arr_produccion.mean()
     
     #cuando la vaca se encuentre en plena produccion
     def preñezVaca(self, toroPajilla, fecha):
@@ -135,9 +135,13 @@ class Ternero(Animal):
             print( self.nombreAnimal + ' debe tomar '+ str(cantidadLeche) +' hasta los  4 meses')
         if cantidadLeche >= 2:
             print( self.nombreAnimal + ' debe tomar '+ str(cantidadLeche) +' hasta los  6 meses')
-        if cantidadLeche >= 1:
+        if cantidadLeche >= 0.5:
             print( self.nombreAnimal + ' debe tomar '+ str(cantidadLeche) +' hasta los  8 meses')
         self.listaConsumo_leche.append(cantidadLeche)
+    
+    def obtenerCantidadConsumoLeche(self):
+        arr_consumoLecheT = np.array(self.listaConsumo_leche)
+        return sum(arr_consumoLecheT), sum(arr_consumoLecheT) * PRECIO_LECHE, arr_consumoLecheT.mean()
         
     def agregarAlimento(self, nuevo_alimento):
         self.listaAlimentos_ternero.append(nuevo_alimento)
@@ -189,17 +193,21 @@ ternero1.fechaNacimiento = "23-08-2021"
 ternero1.listaAlimentos_ternero.extend(['leche','pasto picado','platano'])
 ternero1.agregarAlimento('galleta')
 print(ternero1.consultarAlimentos())
-print(ternero1.eliminarAlimento('leche'))
+print(ternero1.eliminarAlimento('platano'))
+ternero1.tomarLeche(2)
 ternero1.tomarLeche(1)
+
 
 vaca1.agregarTernero(ternero1, "desconocido")
 vaca1.listarHijosTerneros()
 
 
 #USO DE NUMPY
-print(vaca1.obtenerProduccion())
-
-
+rpta1 = vaca1.obtenerProduccion()
+rpta2 = ternero1.obtenerCantidadConsumoLeche()
+print(rpta1)
+print(rpta2)
+print(rpta1 - rpta2)
 
 """
 FALTA:
