@@ -207,7 +207,7 @@ rpta1 = vaca1.obtenerProduccion()
 rpta2 = ternero1.obtenerCantidadConsumoLeche()
 print(rpta1)
 print(rpta2)
-print(rpta1 - rpta2)
+
 
 """
 FALTA:
