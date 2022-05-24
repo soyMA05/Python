@@ -50,3 +50,19 @@ print(sumando)
 
 
 
+##funcion suma pasando varios numeros de parametros
+def sumaSinLimites(*args):
+    return sum(args)
+
+print(sumaSinLimites(1,2,3,4))
+print(sum([1,1,1,1,2]))
+
+#sumando cuadrados de varios numeros
+def sumaCuadrados(*numeros):
+    total=0
+    for n in numeros:
+        total += n**2
+    return total
+
+print('Total suma cuadrados: '+ str(sumaCuadrados(1,2,3,4,5)))
+
