@@ -5,7 +5,7 @@ Created on Tue May 17 23:13:10 2022
 @author: miancastillo
 """
 
-#COLLECTIONS: counter, namedtuple,OrderedDict, defaultdict,deque
+#COLLECTIONS: counter, namedtuple,OrderedDict, defaultdict, deque
 
 """
 1. Counter: es un contenedor que almacena los elementos como claves de diccionario y sus
@@ -54,7 +54,8 @@ print(diccionario_ordenado.items())#muestra el orden en que ingrese los elemento
 
 """
 4. DefaultDict (diccionario predeterminado): tendrá un valor predeterminado si la clave aun no se ha configurado.
-Permite crear un diccionario poniendo valores como si fuera un lista. UTIL PARA CREAR DICCIONARIOS DINAMICOS
+Permite crear un diccionario poniendo valores como si fuera un lista. 
+NOTA: UTIL PARA CREAR DICCIONARIOS DINAMICOS
 """
 from collections import defaultdict
 
@@ -63,5 +64,20 @@ dic['a']=1
 dic['b']=2
 dic['c']=3
 print(dic)
+
+
+"""
+5. Deque(): permite agregar elementos en una lista ya sea desde la derecha o desde la izquierda, osea inicio o final.
+"""
+
+from collections import deque
+
+listaD = deque()
+listaD.append(1)
+listaD.append(2)
+listaD.append(3)
+listaD.append(4)
+listaD.appendleft(5)#agrega a la izquierda
+print(listaD)
 
 
