@@ -38,16 +38,30 @@ print(punto.x, punto.y) #imprime unicamente los valores de las variables x y y.
 3. OrderedDict (dictado ordenado): es como un diccionario normal que recuerda el orden en que se insertaron los 
 elementos. 
 Nota: ya no es muy usado porque desde la clase diccionario integrada en python >=3.7 se puede hacer eso.
-"""
+
 from collections import OrderedDict
 diccionario_ordenado = OrderedDict()
 clave=" "#nombre
 valor=""#edad
 for i in range(3):
-    #clave = str(input("Ingrese su nombre: "))
+    clave = str(input("Ingrese su nombre: "))
     valor = int(input("Ingrese su edad: "))
-    diccionario_ordenado = {i:valor}
+    diccionario_ordenado[clave]=valor
 
-print(diccionario_ordenado.items())
+print(diccionario_ordenado.items())#muestra el orden en que ingrese los elementos a diferencia de muestre por orden A-Z
+
+"""
+
+"""
+4. DefaultDict (diccionario predeterminado): tendrá un valor predeterminado si la clave aun no se ha configurado.
+Permite crear un diccionario poniendo valores como si fuera un lista. UTIL PARA CREAR DICCIONARIOS DINAMICOS
+"""
+from collections import defaultdict
+
+dic = defaultdict(int)#defino tipo de dato para el valor
+dic['a']=1
+dic['b']=2
+dic['c']=3
+print(dic)
 
 
