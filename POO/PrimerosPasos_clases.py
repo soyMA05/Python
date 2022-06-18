@@ -28,4 +28,30 @@ item1.name = "Telefono"
 item1.precio = 200
 item1.cantidad = 2
 
-print(item1.name)
+print(type(item1.name))#obtenemos el mismo resultado que el anterior.
+
+
+""" 3. Crear clase con metodo basico. """
+
+class Item2:
+    def calcular_total_precio(self, x, y):
+        return x * y
+    
+
+#instancias
+item_1 = Item2()
+item_1.precio = 30
+item_1.cantidad = 4
+
+item_2 = Item2()
+item_2.precio = 500
+item_2.cantidad = 5
+
+#invocacion de metodo y visualizacion de precios
+print(item_1.calcular_total_precio(item_1.precio, item_1.cantidad))
+print(item_2.calcular_total_precio(item_2.precio, item_2.cantidad))
+
+
+
+
+
