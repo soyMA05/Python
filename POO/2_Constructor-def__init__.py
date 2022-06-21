@@ -23,7 +23,7 @@ item = Item()
 class Item1:
     #Atributo de clase
     tasa_de_pago = 0.8 #aplicar descuento del 20%
-    
+    all = []
     
     #constructor
     def __init__(self, nombre:str, precio:float, cantidad=0): 
@@ -35,6 +35,9 @@ class Item1:
         self.nombre = nombre
         self.precio = precio 
         self.cantidad = cantidad
+        
+        #atributo de clase para agregar objetos
+        Item1.all.append(self)
        
     #metodo (porque esta dentro de la clase. Si esta fuera de la clase se llama funcion)
     def calcular_total_precio(self):
@@ -54,8 +57,17 @@ print(item.tasa_de_pago) # a nivel de instancia
 print(item.aplicar_descuento())
 
 
+""" PARTE 3: SOLUCION AL PROBLEMA DE CREAR VARIOS TIPOS DE ARTICULOS/ITEMS """
+item1 = Item1("TV", 200, 1)
+item2 = Item1("PC", 700, 1)
+item3 = Item1("Laptop", 1200, 1)
+item4 = Item1("Mouse", 20, 1)
+item5 = Item1("Keyboard", 20, 1)
 
+print(Item1.all)
 
+for i in Item1.all:
+    print(i.nombre)
 
 """ NOTAS:
     1. Para validar un campo de tipo entero no es necesario poner cantidad: int, porque python reconocer por defecto los 
@@ -64,4 +76,5 @@ print(item.aplicar_descuento())
     
     2. assert permite validar los argumentos que se recibe y tambien permite recuperar los errores antes de que se ejecute
         el resto del programa.
+        
 """
