@@ -37,7 +37,7 @@ class Item1:
         self.cantidad = cantidad
         
         #atributo de clase para agregar objetos
-        Item1.all.append(self)
+        Item1.all.append(self) #self es la instancia que se crea y se va agregando a lista
        
     #metodo (porque esta dentro de la clase. Si esta fuera de la clase se llama funcion)
     def calcular_total_precio(self):
@@ -46,6 +46,11 @@ class Item1:
     #metodo para hacer descuento
     def aplicar_descuento(self):
         return self.precio * Item1.tasa_de_pago #forma correcta de hacer uso de atributos de clase
+    
+    #parte3.1: metodo responsable de representar objeto creado> [Clase(atributo1, atributo2), ...]
+    def __repr__(self):
+        return f"Item1({self.nombre}, {self.precio}, {self.cantidad})"
+    
 
 """ Instancia de clase Item1 """
 item = Item1("Laptop", 5, 11)
@@ -64,8 +69,10 @@ item3 = Item1("Laptop", 1200, 1)
 item4 = Item1("Mouse", 20, 1)
 item5 = Item1("Keyboard", 20, 1)
 
-print(Item1.all)
+print(Item1.all)#imprimo todos los objetos creados que estan en la lista usando el metodo __repr__
 
+
+#es util si solo queremos filtrar informacion de todos los objetos creados
 for i in Item1.all:
     print(i.nombre)
 
