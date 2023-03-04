@@ -32,6 +32,7 @@ class Animal:
     
 
 #crear instancias
+tamanio = int(input("Digite el numero de animales:"))
 animal1= Animal("Pulga", 430.3, "Browswiss", 5)
 animal2= Animal("Pepita", 230.3, "Jersey", 5)
 animal3= Animal("Blanca", 523.3, "Hosltein", 5)
