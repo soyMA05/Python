@@ -5,7 +5,7 @@ Created on Wed Mar 30 16:16:58 2022
 @author: MIANCAS
 """
 """
-#Tipos
+#Tipos de errores 
 1. Syntax Error: significa que hay error por no seguir las reglas de escritura.
 2. EXCEPCION: Error detectado durante la ejecución de un programa.
 3. RecursionError: es porque nunca se llega al caso base y el proceso de ejecucion va al infinito.
@@ -79,7 +79,24 @@ Created on Wed Mar 30 16:16:58 2022
 #     
 # finally:
 # =============================================================================
-    
 
+# EJEMPLO COMPLETO
+try:
+    numerator = int(input('Ingrese un numero: '))
+    denominator = int(input("Ingrese un numero para dividir por: "))
 
-
+    result = numerator / denominator
+    print(result)
+except ZeroDivisionError as e:
+    print(e) #muestro el tipo de error
+    print("You can't divide by zero! ") #mensaje personalizado
+except ValueError as e:
+    print(e)
+    print("Enter only numbers plz")
+except Exception as e:
+    print(e)
+    print("Something went wrong / algo ha salido mal")
+else:
+    print(result)
+finally:
+    print("This will always execute/ esto siempre se ejecutara")
