@@ -19,32 +19,43 @@ person={
         "last_name":"Castillo"
         }
 
-#print(dir(person))
+print(dir(person))
 
 #OBTENER SOLO CLAVES DE UN DICCIONARIO
-#print(person.keys())
+print(person.keys())
 
 #OBTENER ITEMS (elementos con clave-valor) DE UN DICCIONARIO
-#print(person.items())
+print(person.items())
 
 
 #VACIAR DICCIONARIO
-#person.clear()
+person.clear()
+
+#UPDATE 
+capitals = {'USA':"Washigton DC",
+            'India':'New Dehli',
+            'China': 'Beijing',
+            'Russia':'Moscow'}
+
+capitals.update({'Germany':'Berlin'})#actualizo diccionario
+print(capitals.get('Germany')) #obtengo valor a partir de clave
+
+capitals.pop('China')#elimino un elemento del dicc a partir de la clave
+print(capitals.items())
 
 #LISTA CON DICCIONARIOS
 productos=[{"name":"book", "price":3.99, "stock":30, "author":"Miguel A."},
            {"name":"laptop", "price":805.99, "stock":20, "author":"Miguel A."}]
 
-
-#print(productos)
+print(productos)
 
 
 # ASIGNO VALOR EN UNA CLAVE O ACTUALIZO VALOR
 #declaro diccionario vacio
 computadoras = {}
-#nombreDiccionario[clave] = valor
-#computadoras[123]="DELL"#Esta forma se utiliza para asignar un valor a una clave de diccionario o para actualizar su valor
-#print(computadoras)
+"""nombreDiccionario[clave] = valor"""
+computadoras[123]="DELL"#Esta forma se utiliza para asignar un valor a una clave de diccionario o para actualizar su valor
+print(computadoras)
 
 
 
@@ -69,7 +80,6 @@ print("Clientes registrados: ")
 for i in lista_clientes:
     print(i["Nombre"],'-',i['Edad'])
     
-
 
 
 
