@@ -26,4 +26,13 @@ colores.clear()
 print(colores)
 
 #ELIMINAR variable de tipo de dato SET
-#del colores
+del colores
+
+utensils = {"fork", "spoon", "knife"}
+dishes = {"bowl", "plate", "cup"}
+utensils.add("napkin")
+dishes.update(utensils)
+dinner_table =utensils.union(dishes)
+
+for i in dinner_table:
+    print(i)
