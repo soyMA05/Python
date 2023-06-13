@@ -33,6 +33,6 @@ print(timedelta(minutes=110))
 
 
 # IMPORTO MODULO PROPIO modmath
-from modmath import sumar, restar
+from modulomath import sumar, restar
 sumar(23, 5)
 restar(23, 5)
