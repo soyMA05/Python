@@ -1,4 +1,4 @@
-#multiherencia: es cuando una clase derivada (hijo) hereda otra clase derivada (hijo)
+#herencia multinivel: es cuando una clase derivada (hijo) hereda otra clase derivada (hijo)
 
 #clase padre
 class Organism:
