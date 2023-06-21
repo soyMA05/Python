@@ -8,11 +8,13 @@ car_2 = Car("Ford", "Ranger", 2025, "black")
 #CAR 1
 #imprimir atributos de clase
 print(car_1.make)
+print(car_1.wheels)
 #imprimir acciones o metodo de clase
 car_1.drive()
 
 #CAR 2
 print(car_2.make)
+print(car_2.wheels)
 car_2.drive()
 
 
@@ -29,3 +31,12 @@ for c in cars:
     print(c.color)
     c.drive()
     c.stop()
+
+
+#llamando atributos de clase
+Car.wheels=6
+#creando objeto
+car_3 = Car("Ford", "Bronco 6x6", "2021","black")
+#invocando atributos de instancia
+print(car_3.make)
+print(car_3.wheels)
