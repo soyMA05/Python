@@ -27,17 +27,16 @@ def seleccionar_plato(platos_carta):
             #imprimo el plato seleccionado y lo agrego a la lista de pedidos
             print("Plato seleccionado: ", buscar_plato)
             lista_pedidos.append(buscar_plato)
-
-            #pregunto al cliente si desea hacer otro pedido
-            opcion_nuevospedidos()
         
         #manejo de excepciones
-
         except ValueError as ev:
             print(ev, '\nDato ingresado incorrectamente, intente nuevamente...')
 
         except IndexError as e:
             print(e,"\nEse plato no existe, intente nuevamente...")
+
+    #pregunto al cliente si desea hacer otro pedido
+    opcion_nuevospedidos()
 
 #mostrar los platos que ha pedido el cliente
 def platos_pedidos():
@@ -70,8 +69,9 @@ def opcion_nuevospedidos():
         
     elif eliminar_pedido == 'a':
         print("Su pedido ha sido confirmado, espere nuestros platos\nGracias por preferirnos :)")
+        exit()
 
-    eliminar_pedido = None
+    #eliminar_pedido = None
 
 def quitar_platopedidos():
     quitar_pedido = None
